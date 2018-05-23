@@ -4,7 +4,7 @@ const os = require('os')
 
 const OUTPUT = 'output'
 
-const jsonify = (filePath='test-data.csv')=>{
+const jsonify = (filePath='customer-data.csv')=>{
   if (typeof(filePath)==='string' && filePath.length>0) {
     if (fs.existsSync(filePath)) {
       fs.readFile(path.join(__dirname, filePath), {encoding: 'utf-8'}, (error, data)=>{
