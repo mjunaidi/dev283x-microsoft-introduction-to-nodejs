@@ -42,7 +42,7 @@ const jsonify = (filePath='customer-data.csv')=>{
             const outputFilePath = `${OUTPUT}/${filePath}.json`
             fs.writeFile(outputFilePath, JSON.stringify(arr, null, 2), (error)=>{
               if (error) return console.error(error)
-              console.log(`Created at ${outputFilePath}.`);
+              console.log(`A json file is created at "${outputFilePath}".`);
             })
           }
         }
