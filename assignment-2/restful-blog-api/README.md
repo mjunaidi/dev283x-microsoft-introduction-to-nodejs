@@ -30,4 +30,16 @@ curl "http://localhost:3000/posts"
 
 //deletes post data at specific id
 curl -X DELETE "http://localhost:3000/posts/0"
+
+// post comment to the first post
+curl -H "Content-Type: application/json" -X POST -d "{\"text\": \"Testing...\"}"  "http://localhost:3000/posts/0/comments"
+
+// update comment of the first post
+curl -H "Content-Type: application/json" -X PUT -d "{\"text\": \"Testing, testing, 1, 2, 3!\"}"  "http://localhost:3000/posts/0/comments/0"
+
+// get all comments for the first post
+curl "http://localhost:3000/posts/0/comments"
+
+// remove the first comment of the first post
+curl -X DELETE "http://localhost:3000/posts/0/comments/0"
 ```
